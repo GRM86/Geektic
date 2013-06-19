@@ -153,5 +153,6 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="D:/DbSetup-1.0-RC1-dist/DbSetup-1.0-RC1/DbSetup-1.0-RC1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
