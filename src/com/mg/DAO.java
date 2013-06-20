@@ -3,10 +3,17 @@ package com.mg;
 import java.sql.*;
 import java.util.ArrayList;
 import java.net.*;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class DAO {
+	
+	@PersistenceContext
+	private EntityManager em;
 	
 	protected Statement  statement = null;
 	protected Connection connexion = null;

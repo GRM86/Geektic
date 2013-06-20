@@ -32,11 +32,10 @@
 		<div id="fond">
 			<br />
 				<h1>GEEKTIC</h1>
-			<br />
 			<table class="table_first">
 				<tr>
 					<td class="td_first">
-						<form action="/MeetGeek/recherche" method="post">
+						<form action="/Geektic/recherche" method="post">
 							<table class="table_second">
 								<tr><td>
 										<table class="table_title"><tr><td><b>RECHERCHER</b></td></tr></table>
@@ -114,7 +113,7 @@
 											String fiche="";
 											
 											for (Integer i=0; i < users.size();i++){
-												fiche="<a href='/MeetGeek/user?id="+users.get(i).getId()+"' target=wclose onclick=window.open('aide.php?code=1','wclose','width=560,height=305,toolbar=no,status=no,left=300,top=100')>";
+												fiche="<a href='/Geektic/user?id="+users.get(i).getId()+"' target=wclose onclick=window.open('aide.php?code=1','wclose','width=560,height=305,toolbar=no,status=no,left=300,top=100')>";
 
 												out.println("<tr class=\""+users.get(i).getCouleurSexe()+"\">");
 												out.println("<td class=\"td_user\">"+fiche+users.get(i).getPseudo()+"</td>");

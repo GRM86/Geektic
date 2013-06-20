@@ -31,7 +31,7 @@
 					</tr>
 					<tr style="height:56px;">
 						<td>
-							<form action="/MeetGeek/user?id=<% out.println(user.getId()); %>" method="post">
+							<form action="/Geektic/user?id=<% out.println(user.getId()); %>" method="post">
 								<input type="submit" value="Aimer"/>
 							</form>
 						</td>

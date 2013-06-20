@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity
@@ -18,7 +20,13 @@ public class User {
 	private String sexe;
 	private String couleursexe;
 	private String avatar;
-	@ManyToMany(mappedBy = "Interet")
+	@ManyToMany
+    @JoinTable(name="T_USERINTERET",
+        joinColumns=
+            @JoinColumn(name="IDGEEK", referencedColumnName="T_USER.ID"),
+        inverseJoinColumns=
+            @JoinColumn(name="IDINTERET", referencedColumnName="T_INTERET.ID")
+    )
 	private ArrayList<Interet> interets = new ArrayList<Interet>();
 	private Integer nbinterets = 0;
 		

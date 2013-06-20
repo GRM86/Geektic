@@ -6,8 +6,9 @@ import java.util.ArrayList;
 
 public class Service {
 	
-	private DAO dao;
+	private static DAO dao;
 	
+	@SuppressWarnings("static-access")
 	public Service() {
 		try {
 			this.dao = new DAO();
@@ -29,7 +30,7 @@ public class Service {
 	//DECONNEXION
 	
 	public void deconnexion(){
-		this.dao.deconnexion();
+		Service.dao.deconnexion();
 	}
 	
 	//T_AUDIT
@@ -45,7 +46,7 @@ public class Service {
 	
 	//T_USER
 	
-	public User getUser(String id) throws SQLException{
+	public static User getUser(String id) throws SQLException{
 		User user=dao.getUser(id);
 		return user;
 	}

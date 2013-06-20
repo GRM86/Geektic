@@ -27,7 +27,7 @@ public class ControllerUser extends HttpServlet {
 		String type = "1";
 		
 		try {
-			User user = service.getUser(id);
+			User user = Service.getUser(id);
 			request.setAttribute( "user", user);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -61,7 +61,7 @@ public class ControllerUser extends HttpServlet {
 		String type = "2";
 			
 		try {
-			User user = service.getUser(id);
+			User user = Service.getUser(id);
 			request.setAttribute( "user", user);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

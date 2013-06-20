@@ -7,7 +7,7 @@ import javax.persistence.*;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class DAO2 {
+public class DAOJPA {
 
 	@PersistenceContext
 	private EntityManager em;
